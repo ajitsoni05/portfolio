@@ -1,18 +1,21 @@
 /************************TAG SELECTORS***************************/
 
-
 body {
   margin: 0;
   text-align: center;
   font-family: 'Merriweather', serif;
   color: #40514E;
+  background: linear-gradient(180deg, #EAF6F6, #66BFBF);
 }
 
 h1 {
-  margin:50px auto 0 auto;
+  margin: 50px auto 0 auto;
   font-family: 'Fredoka One', cursive;
   font-size: 5.625rem;
   color: #66BFBF;
+  background: linear-gradient(90deg, #3498db, #9b59b6);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 h2 {
@@ -26,21 +29,22 @@ h2 {
 h3 {
   font-family: 'Montserrat', sans-serif;
   color:  #11999E;
-
 }
-a{
-   color:  #11999E;
-   font-family: 'Montserrat', sans-serif;
-   margin: 10px 20px;
-   text-decoration: none;
-   font-size: 30px;
 
+a {
+  color:  #11999E;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px 20px;
+  text-decoration: none;
+  font-size: 30px;
 }
-a:hover{
+
+a:hover {
   color: #EAF6F6;
+  text-decoration: underline;
 }
 
-hr{
+hr {
   border-style: none;
   border-top-style: dotted ;
   color:  grey;
@@ -48,76 +52,73 @@ hr{
   width: 3%;
   margin: 100px auto;
 }
-p{
+
+p {
   line-height: 2;
 }
+
 /***********************CLASS SELECTORS**************************/
+
 .icon {
   border-radius: 100%;
 }
+
 .profile-pic {
   transition: transform .2s;
 }
-.profile-pic:hover{
+
+.profile-pic:hover {
   transform: scale(2);
 }
-.top-container {
-  padding-top: 100px;
-  position: relative;
-  background-color: #EAF6F6;
 
+.top-container, .middle-container, .bottom-container {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
 }
 
-.middle-container {
-  margin: 100px 0;
+.skill-row {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.bottom-container {
-background-color: #66BFBF;
-padding: 50px 0 20px;
-}
-
-.skill-row{
-  width: 50%;
-  margin: 100px auto 100px auto;
-  text-align: left;
-}
-.skill{
+.skill, .leg-spin {
   border-radius: 100%;
   width: 20%;
-transition: transform .2s; /* Animation */
-float: left;
-margin-right: 30px;
-
+  transition: transform .2s; /* Animation */
+  float: left;
+  margin-right: 30px;
 }
-.leg-spin{
 
-  border-radius: 100%;
+.leg-spin {
   width: 35%;
-transition: transform .2s; /* Animation */
-float: right;
-margin-left: 30px;
-position: relative;
+  float: right;
+  margin-left: 30px;
+  position: relative;
 }
-.skill:hover{
+
+.skill:hover, .leg-spin:hover {
   transform: scale(2);
 }
 
-.leg-spin:hover{
-  /* transform: scale(2); */
-  transform: scale(2);
-}
 .pro {
   text-decoration: underline;
 }
-.intro{
-  width: 30%;
+
+.intro {
+  width: 80%;
   margin: auto;
 }
-.contact-message{
-  width: 40%;
+
+.contact-message {
+  width: 80%;
   margin: 40px auto 60px;
 }
+
 .bottom-cloud {
   position: absolute;
   left: 250px;
@@ -130,13 +131,15 @@ position: relative;
   top: 40px;
   right: 300px;
   animation: cloudAnimation 10s linear infinite;
+}
 
+.copyright {
+  text-align: center;
+  font-size: 0.75rem;
+  color: #fff;
+  padding: 20px 0;
 }
-.copyright{
- color: #EAF6F6;
- font-size: 0.75rem;
- padding: 20px 0;
-}
+
 .btn {
   background: #11cdd4;
   background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
@@ -152,8 +155,7 @@ position: relative;
   font-size: 34px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
-
-
+  transition: background-color 0.3s;
 }
 
 .btn:hover {
@@ -166,3 +168,22 @@ position: relative;
   text-decoration: none;
 }
 
+@media screen and (max-width: 768px) {
+  /* Add responsive styles here */
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .intro, .contact-message {
+    width: 100%;
+  }
+
+  .skill-row {
+    width: 80%;
+    margin: 20px auto;
+  }
+}
