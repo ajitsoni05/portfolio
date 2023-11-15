@@ -163,3 +163,13 @@ position: relative;
   background-image: linear-gradient(to bottom,  #30e3cb, #2bc4ad);
   text-decoration: none;
 }
+.top-cloud, .bottom-cloud {
+  animation: cloudAnimation 10s linear infinite;
+}
+
+@keyframes cloudAnimation {
+  0% { transform: translateX(-20px); }
+  50% { transform: translateX(20px); }
+  100% { transform: translateX(-20px); }
+}
+
