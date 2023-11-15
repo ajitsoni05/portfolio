@@ -68,7 +68,7 @@ p {
 }
 
 .profile-pic:hover {
-  transform: scale(2);
+  transform: scale(1.2);
 }
 
 .top-container, .middle-container, .bottom-container {
@@ -77,6 +77,7 @@ p {
   border-radius: 8px;
   padding: 20px;
   margin: 20px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .skill-row {
@@ -84,14 +85,16 @@ p {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: slideIn 1s ease-in-out;
 }
 
 .skill, .leg-spin {
   border-radius: 100%;
   width: 20%;
-  transition: transform .2s; /* Animation */
+  transition: transform .2s;
   float: left;
   margin-right: 30px;
+  animation: rotateIn 1s ease-in-out;
 }
 
 .leg-spin {
@@ -99,10 +102,11 @@ p {
   float: right;
   margin-left: 30px;
   position: relative;
+  animation: rotateIn 1s ease-in-out;
 }
 
 .skill:hover, .leg-spin:hover {
-  transform: scale(2);
+  transform: scale(1.2);
 }
 
 .pro {
@@ -168,22 +172,23 @@ p {
   text-decoration: none;
 }
 
-@media screen and (max-width: 768px) {
-  /* Add responsive styles here */
-  h1 {
-    font-size: 3.5rem;
-  }
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-  h2 {
-    font-size: 2rem;
-  }
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
 
-  .intro, .contact-message {
-    width: 100%;
-  }
+@keyframes rotateIn {
+  from { transform: rotate(-45deg); opacity: 0; }
+  to { transform: rotate(0); opacity: 1; }
+}
 
-  .skill-row {
-    width: 80%;
-    margin: 20px auto;
-  }
+@keyframes cloudAnimation {
+  0% { transform: translateX(-20px); }
+  50% { transform: translateX(20px); }
+  100% { transform: translateX(-20px); }
 }
