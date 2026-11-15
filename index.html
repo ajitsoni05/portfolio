@@ -1,64 +1,363 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<!doctype html>
+<html lang="en">
 <head>
-  <title>Ajit</title>
   <meta charset="utf-8">
-  <title></title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link class="icon" rel="icon" href="fav.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ajit Soni · Product Engineer</title>
+  <meta name="description" content="Ajit Soni, full-stack product engineer in Bengaluru. Senior Software Engineer at Distill.io, ex-Amagi. Go, Node.js, TypeScript, Svelte. Builds and ships browser extensions, an iOS game and AI features.">
+  <meta name="theme-color" content="#0b1119">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ajitsoni05.github.io/portfolio/">
+  <meta property="og:title" content="Ajit Soni · Product Engineer">
+  <meta property="og:description" content="I build products end to end. Senior Software Engineer at Distill.io, ex-Amagi. Maker of FocalReader.">
+  <meta property="og:image" content="https://ajitsoni05.github.io/portfolio/images/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Fredoka+One&family=Merriweather&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    // Apply a saved theme before first paint so the page doesn't flash.
+    try {
+      const t = localStorage.getItem("theme");
+      if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  </script>
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
-  <div class="top-container">
-    <img class="top-cloud" src="images/cloud.png" alt="cloud-img">
-    <h1>I'm Ajit.</h1>
-    <h2>a <span class="pro">pro</span>grammer.</h2>
-    <img class="bottom-cloud" src="images/cloud.png" alt="cloud-img">
-    <img src="images/mountain.png" alt="mountain-img">
-  </div>
-  <div class="middle-container">
-    <div class="profile">
-      <img class="profile-pic" src="images/profile_pic.png" alt="">
-      <h2>Hello</h2>
-      <p class="intro">I'm a Software Engineer. I ❤️ playing cricket and invesing in stock markets. </p>
-    </div>
-    <hr>
-    <div class="skills">
-      <h2>My Skills.</h2>
-      <div class="skill-row">
-        <img class="skill" src="https://media2.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif?cid=ecf05e47dlw6cp2av3dx3c5qevzjnh299lzhny7yve4jqpny&rid=giphy.gif&ct=g" alt="">
-        <h3>Coding</h3></h3>
-        <p>I started learning to code when I was in college because I wanted to test my problem solving skills.Over time, I have gained some experience in data structures and algorithms, and have recently tried my hands on competitive programming.</p>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top" aria-label="Ajit Soni, back to top">
+        <span class="brand-mark" aria-hidden="true">as</span>
+        <span>Ajit Soni</span>
+      </a>
+      <nav aria-label="Sections">
+        <ul class="nav-links">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch colour theme">
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 1.5v2.5M12 20v2.5M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M1.5 12H4M20 12h2.5M4.6 19.4l1.8-1.8M17.6 6.4l1.8-1.8"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7Z"/></svg>
+        </button>
+        <a class="btn btn-small" href="#contact">Contact</a>
       </div>
-      <div class="skill-row">
-        <img class="leg-spin" src="https://media3.giphy.com/media/QtipHdYxYopX3W6vMs/giphy.gif?cid=ecf05e47ythtou4rti17tiy7tf2xqle0vlami0jkhrrgc6yh&rid=giphy.gif&ct=g" alt="">
-        <h3>Leg-Spin</h3>
-        <p>But my best skill is actually bowling a leg spinner,which is a type of spin bowling in cricket.I have played cricket since my childhood and am undisputed champion of leg spin bowling atleast
-        among my friends :) </p>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="hello">Ajit Soni <span class="sep">·</span> Senior Software Engineer at Distill.io</p>
+          <h1>I build products <em>end&nbsp;to&nbsp;end.</em></h1>
+          <p class="lede">
+            Product engineer in Bengaluru with 4.5 years of shipping across backend and frontend.
+            At work that means archival pipelines and search engines. On my own it means browser extensions
+            with real users, an iPhone game and AI features. Strongest in <strong>Go</strong> and <strong>Node.js</strong>;
+            I own the UI in <strong>Svelte</strong> and <strong>TypeScript</strong> too.
+          </p>
+          <p class="lede next">Next: AI-native products where agents take real actions, not just generate text.</p>
+          <div class="cta">
+            <a class="btn" href="mailto:ajitsoni000005@gmail.com">
+              Email me
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="https://github.com/ajitsoni05" target="_blank" rel="noopener">
+              <svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-1.97c-3.2.7-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+              GitHub
+            </a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/ajitsoni05/" target="_blank" rel="noopener">
+              <svg class="fill" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.31-.02-3-1.83-3-1.83 0-2.11 1.43-2.11 2.9V21H9V9Z"/></svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <aside class="now" aria-label="What I'm doing now">
+          <div class="now-head">
+            <span class="mono">~/now</span>
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          </div>
+          <dl>
+            <div>
+              <dt>Day job</dt>
+              <dd>Search, archival and theming at <a href="https://distill.io" target="_blank" rel="noopener">Distill.io</a></dd>
+            </div>
+            <div>
+              <dt>Shipping</dt>
+              <dd><a href="https://focalreader.com" target="_blank" rel="noopener">FocalReader</a>, with <strong class="live"><span class="pulse" aria-hidden="true"></span><span data-readers>200+</span> active readers</strong></dd>
+            </div>
+            <div>
+              <dt>Building</dt>
+              <dd>Labyrinth, a tilt maze for iPhone and iPad</dd>
+            </div>
+            <div>
+              <dt>Learning</dt>
+              <dd>How Spark works, by rebuilding it in Scala</dd>
+            </div>
+          </dl>
+          <p class="now-foot mono">Reader count is live from the Chrome and Firefox stores.</p>
+        </aside>
       </div>
+    </section>
 
+    <!-- Experience -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Experience</p>
+          <h2 id="work-title">Where I've shipped</h2>
+        </header>
+
+        <ol class="jobs">
+          <li class="job">
+            <div class="job-meta">
+              <p class="when">Nov 2024 – now</p>
+              <p class="where">Bengaluru</p>
+            </div>
+            <div class="job-body">
+              <h3><a href="https://distill.io" target="_blank" rel="noopener">Distill.io</a> <span class="role">Senior Software Engineer</span></h3>
+              <p class="context">Website-change monitoring, across a web app, a browser extension and a desktop app.</p>
+              <ul>
+                <li>Own the <strong>web-page archival pipeline</strong> end to end: it ingests MHTML captures, deduplicates content by hash and garbage-collects unreferenced data to cut storage costs.</li>
+                <li>Built the in-product <strong>search engine</strong> on SQLite and regex, with Boolean, negation, label, status, error and multi-word queries. Backed it with <strong>900+ automated tests</strong>, so it shipped without regressions.</li>
+                <li>Shipped <strong>dark mode</strong> across all three apps by moving theme state and CSS variables into one shared system, with saved user preferences.</li>
+              </ul>
+              <ul class="tags" aria-label="Tech">
+                <li>SQLite</li><li>MHTML</li><li>TypeScript</li><li>Svelte</li><li>Browser extensions</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="job">
+            <div class="job-meta">
+              <p class="when">Jul 2022 – Nov 2024</p>
+              <p class="where">Bengaluru</p>
+            </div>
+            <div class="job-body">
+              <h3><a href="https://www.amagi.com" target="_blank" rel="noopener">Amagi</a> <span class="role">Software Engineer</span></h3>
+              <p class="context">Cloud broadcast and FAST-channel platform for media companies. Three teams in two and a half years.</p>
+              <ol class="stints">
+                <li>
+                  <p class="stint-head"><span>EPG</span><span class="mono">May – Nov 2024</span></p>
+                  <p>Built <strong>Electronic Programming Guide</strong> services for FAST linear channels, integrating with distribution partners' APIs so schedules show correctly on every platform. Cut P2/P3 customer escalations by <strong>20%</strong> by owning production hotfixes.</p>
+                </li>
+                <li>
+                  <p class="stint-head"><span>AmagiNow 2.0</span><span class="mono">Nov 2023 – May 2024</span></p>
+                  <p>REST APIs for linear TV in Rails and MySQL. Wrote error-check Rake tasks adopted by <strong>15+ engineers</strong>, and raised test coverage to <strong>88.6%</strong>, which cut production issues by <strong>90%</strong>.</p>
+                </li>
+                <li>
+                  <p class="stint-head"><span>VOD 3.0</span><span class="mono">Jul 2022 – Oct 2023</span></p>
+                  <p>Designed a <strong>distributed tracing</strong> system covering <strong>1M+ API calls a month</strong>, giving the team the latency data to find and fix slow paths. Split the platform into <strong>microservices</strong> so teams could ship independently.</p>
+                </li>
+              </ol>
+              <ul class="tags" aria-label="Tech">
+                <li>Microservices</li><li>Distributed tracing</li><li>Ruby on Rails</li><li>MySQL</li><li>REST APIs</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="job">
+            <div class="job-meta">
+              <p class="when">Apr 2019 – Mar 2020</p>
+              <p class="where">Delhi</p>
+            </div>
+            <div class="job-body">
+              <h3>Coding Ninjas <span class="role">Coding Instructor</span></h3>
+              <ul>
+                <li>Taught C++ and data structures to <strong>200+ students</strong>, and resolved <strong>1,800+ doubts</strong> at a <strong>4.86/5</strong> rating.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Own products -->
+    <section class="section" id="products" aria-labelledby="products-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Products</p>
+          <h2 id="products-title">Things I've built and shipped on my own</h2>
+          <p class="section-sub">Idea, design, code, store listing, support. All of it.</p>
+        </header>
+
+        <article class="card feature">
+          <div class="feature-copy">
+            <p class="kind">Browser extension · Chrome and Firefox</p>
+            <h3>FocalReader</h3>
+            <p>A reading spotlight for people with ADHD and dyslexia. It dims the page around the paragraph you're on, so your eyes stop wandering.</p>
+            <ul class="points">
+              <li><strong>Smart Window</strong> snaps focus to headings, paragraphs and sections, and steps through them from the keyboard. Works in the PDF viewer too.</li>
+              <li><strong>Explain (AI)</strong>: focus a dense paragraph and get a plain-language version, on web pages and PDFs. Free daily quota, with a Pro plan for more.</li>
+              <li><strong>Note anchoring</strong> with import and export. I rewrote annotation matching to remove an O(n²) slowdown as saved notes grow.</li>
+            </ul>
+            <p class="live-line"><span class="pulse" aria-hidden="true"></span><strong><span data-readers>200+</span> active readers</strong>, live from the Chrome and Firefox stores</p>
+            <p class="links">
+              <a href="https://focalreader.com" target="_blank" rel="noopener">focalreader.com <span aria-hidden="true">↗</span></a>
+              <a href="https://chromewebstore.google.com/detail/focalreader-%E2%80%93-adhd-focus/ccmkhgbcbcjmhmpeomaljbnlifdhgbjg" target="_blank" rel="noopener">Chrome Web Store <span aria-hidden="true">↗</span></a>
+              <a href="https://addons.mozilla.org/en-GB/firefox/addon/focalreader-adhd-focus-reader/" target="_blank" rel="noopener">Firefox Add-ons <span aria-hidden="true">↗</span></a>
+            </p>
+          </div>
+
+          <!-- Illustration of Smart Window stepping through a page -->
+          <figure class="reader" aria-hidden="true">
+            <div class="reader-bar"><i></i><i></i><i></i><span>example.com/a-long-read</span></div>
+            <div class="reader-page">
+              <div class="r-h"></div>
+              <div class="r-p p1"><i></i><i></i><i></i><i style="width:62%"></i></div>
+              <div class="r-p p2"><i></i><i></i><i></i><i style="width:78%"></i></div>
+              <div class="r-p p3"><i></i><i></i><i style="width:45%"></i></div>
+              <div class="spot"></div>
+            </div>
+            <figcaption><kbd>Shift</kbd> + <kbd>↓</kbd> next block</figcaption>
+          </figure>
+        </article>
+
+        <div class="product-grid">
+          <article class="card product">
+            <a class="shot" href="https://ajitsoni05.github.io/labyrinth/" target="_blank" rel="noopener" tabindex="-1">
+              <img src="images/labyrinth.jpg" width="1100" height="506" loading="lazy" alt="Labyrinth: a steel ball on a wooden tilt maze with holes, on iPhone">
+            </a>
+            <p class="kind">iPhone and iPad game · coming soon to the App Store</p>
+            <h3>Labyrinth: Steel &amp; Wood</h3>
+            <p>The wooden tilt-maze toy, on your phone. Tip the device to roll a steel ball past the holes. Rolling physics runs at <strong>1,200 Hz</strong> so the ball has weight, with 46 levels, a Daily Maze, and races against the autopilot or a friend nearby.</p>
+            <p class="links"><a href="https://ajitsoni05.github.io/labyrinth/" target="_blank" rel="noopener">Game website <span aria-hidden="true">↗</span></a></p>
+          </article>
+
+          <article class="card product">
+            <div class="tabs-art" aria-hidden="true">
+              <div class="strip">
+                <span class="tab on">Docs</span><span class="tab on">PR #812</span><span class="tab cool">News</span><span class="tab cool">Flights</span><span class="tab cold">Recipe</span>
+              </div>
+              <div class="archive"><span class="mono">archive</span><span class="bar"></span><span class="bar short"></span></div>
+            </div>
+            <p class="kind">Chrome extension</p>
+            <h3>FocalTabs</h3>
+            <p>Time-aware tab management. Tabs you stop using cool into a group, snooze themselves and land in a searchable archive. Nothing lost, everything quieter.</p>
+            <p class="links"><a href="https://chromewebstore.google.com/detail/focaltabs/ogcpbfooclilidipalggkblcggicndik" target="_blank" rel="noopener">Chrome Web Store <span aria-hidden="true">↗</span></a></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engineering projects -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Projects</p>
+          <h2 id="projects-title">Small systems, built to learn how big ones work</h2>
+        </header>
+
+        <div class="project-grid">
+          <article class="card project">
+            <div class="project-top"><h3>mini-spark</h3><span class="lang">Scala 3</span></div>
+            <p>A Spark-style data engine: lazy RDDs, a DAG scheduler that cuts stages at shuffles, map-side combine, and lineage-based recovery. A chaos mode injects task failures and executor crashes, and the tests check results never change.</p>
+            <p class="links"><a href="https://github.com/ajitsoni05/mini-spark" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span></a></p>
+          </article>
+
+          <article class="card project">
+            <div class="project-top"><h3>mhtml-go</h3><span class="lang">Go</span></div>
+            <p>A faithful, lossless MHTML parser with no dependencies outside the standard library. Parts decode lazily and binary bodies are never copied. Golden tests pin the byte-exact output, and the parser is fuzzed.</p>
+            <p class="links"><a href="https://github.com/ajitsoni05/mhtml-go" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span></a></p>
+          </article>
+
+          <article class="card project">
+            <div class="project-top"><h3>Go Redis</h3><span class="lang">Go</span></div>
+            <p>An in-memory key-value store supporting SET, GET, DEL and ZADD, NX/XX conditional writes, TTL expiry and mutex-based concurrency.</p>
+            <p class="links"><a href="https://github.com/ajitsoni05/go-redis" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span></a></p>
+          </article>
+
+          <article class="card project">
+            <div class="project-top"><h3>Travel Plan</h3><span class="lang">TypeScript</span></div>
+            <p>A multi-modal route planner across air and rail networks, using Dijkstra's algorithm, with a Vis.js graph you can explore.</p>
+            <p class="links">
+              <a href="https://ajitsoni05.github.io/TravelPlan/" target="_blank" rel="noopener">Live demo <span aria-hidden="true">↗</span></a>
+              <a href="https://github.com/ajitsoni05/TravelPlan" target="_blank" rel="noopener">Code <span aria-hidden="true">↗</span></a>
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About + skills -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="wrap about-grid">
+        <div class="about-copy">
+          <header class="section-head">
+            <p class="eyebrow">About</p>
+            <h2 id="about-title">A bit about me</h2>
+          </header>
+          <div class="about-intro">
+            <img class="avatar" src="images/profile_pic.png" width="190" height="190" alt="Ajit Soni">
+            <div>
+              <p>I studied Electrical and Electronics Engineering at NIT Trichy and spent most of it writing code. I like owning a feature from the schema to the last pixel, and I like shipping my own things to real users even more.</p>
+              <p>Off the keyboard I bowl leg-spin. Undisputed champion, at least among my friends.</p>
+            </div>
+          </div>
+
+          <ul class="facts">
+            <li><span class="fact-k">B.Tech, EEE</span><span>NIT Trichy · 2018–2022 · GPA 8.21/10</span></li>
+            <li><span class="fact-k">JEE 2018</span><span>All India Rank 3,230</span></li>
+            <li><span class="fact-k">LeetCode</span><span><a href="https://leetcode.com/u/ajitsoni/" target="_blank" rel="noopener">800+ problems solved</a></span></li>
+            <li><span class="fact-k">Amagination</span><span>Top 10 finalist, Amagi's internal hackathon</span></li>
+            <li><span class="fact-k">Startup Weekend</span><span>Runner-up, NIT Trichy 2018</span></li>
+          </ul>
+        </div>
+
+        <div class="toolbox">
+          <h3 class="eyebrow">Toolbox</h3>
+          <dl>
+            <div><dt>Languages</dt><dd>Go, TypeScript, JavaScript, Python, Ruby, C++</dd></div>
+            <div><dt>Backend</dt><dd>Node.js, REST APIs, microservices, distributed tracing, background jobs</dd></div>
+            <div><dt>Frontend</dt><dd>Svelte, HTML, CSS, browser extensions, desktop apps</dd></div>
+            <div><dt>Data</dt><dd>PostgreSQL, SQLite, MySQL, MongoDB, full-text search</dd></div>
+            <div><dt>AI / LLM</dt><dd>OpenAI and Claude APIs, tool calling, RAG</dd></div>
+            <div><dt>Infra</dt><dd>Docker, Kubernetes, AWS, GCP, Linux</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <p class="eyebrow">Contact</p>
+        <h2 id="contact-title">Building something ambitious? <span class="accent nowrap">Let's talk.</span></h2>
+        <p class="section-sub">Email is the fastest way to reach me.</p>
+        <div class="email-row">
+          <a class="email" href="mailto:ajitsoni000005@gmail.com">ajitsoni000005@gmail.com</a>
+          <button class="copy" type="button" data-copy="ajitsoni000005@gmail.com">Copy</button>
+        </div>
+        <ul class="socials">
+          <li><a href="https://www.linkedin.com/in/ajitsoni05/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://github.com/ajitsoni05" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></li>
+          <li><a href="https://leetcode.com/u/ajitsoni/" target="_blank" rel="noopener">LeetCode <span aria-hidden="true">↗</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© <span data-year>2026</span> Ajit Soni · Bengaluru</span>
+      <a href="https://github.com/ajitsoni05/portfolio" target="_blank" rel="noopener">Source</a>
     </div>
-    <hr>
-    <div class="contact-me">
-      <h2>Get In Touch</h2>
-      <h3>If you love cricket as much as I do.</h3>
-      <p class="contact-message">Let's talk about it. We can also share our coding knowledge cuz sharing is caring ❤️</p>
-      <a class="btn" href="mailto:ajitsoni000005@gmail.com">CONTACT ME</a>
-    </div>
-  </div>
-
-
-  <div class="bottom-container">
-    <a class="footer-link" href="https://www.linkedin.com/in/ajit-soni-6a55a3158/" target="_blank">LinkedIn </a>
-    <a class="footer-link" href="https://leetcode.com/ajitsoni000005/" target="_blank">Leetcode</a>
-    <a class="footer-link" href="https://www.instagram.com/ajit.soni_007/">Instagram</a>
-    <p class="copyright">© 2022 Ajit Soni @ Amagi</p>
-  </div>
-
+  </footer>
 </body>
-
 </html>
