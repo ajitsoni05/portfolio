@@ -45,3 +45,13 @@ document.querySelectorAll("[data-copy]").forEach((btn) => {
 });
 
 document.querySelectorAll("[data-year]").forEach((el) => { el.textContent = new Date().getFullYear(); });
+
+// Labyrinth's promo plays muted while it's on screen, unless the visitor prefers less motion.
+// Its controls stay, so it can be played or unmuted by hand.
+const promo = document.querySelector("[data-promo]");
+if (promo && "IntersectionObserver" in window && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  new IntersectionObserver(([entry]) => {
+    if (entry.isIntersecting) promo.play().catch(() => {});
+    else promo.pause();
+  }, { threshold: 0.4 }).observe(promo);
+}
